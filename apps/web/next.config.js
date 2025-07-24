@@ -12,17 +12,6 @@ const nextConfig = {
     // Temporarily ignore lint errors during initial setup  
     ignoreDuringBuilds: true,
   },
-  async redirects() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: process.env.NEXT_PUBLIC_API_URL ? 
-          `${process.env.NEXT_PUBLIC_API_URL}/api/:path*` : 
-          'http://localhost:3001/api/:path*',
-        permanent: false,
-      },
-    ];
-  },
 };
 
 export default nextConfig;
