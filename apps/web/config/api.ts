@@ -21,10 +21,12 @@ export const apiRequest = async (endpoint: string, options: RequestInit = {}) =>
     'Content-Type': 'application/json',
   };
   
-  // Add auth header if token exists
-  const token = localStorage.getItem('token');
-  if (token) {
-    defaultHeaders.Authorization = `Bearer ${token}`;
+  // Add auth header if token exists (client-side only)
+  if (typeof window !== 'undefined') {
+    const token = localStorage.getItem('token');
+    if (token) {
+      defaultHeaders.Authorization = `Bearer ${token}`;
+    }
   }
   
   const config: RequestInit = {

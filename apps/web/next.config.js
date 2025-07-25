@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbopack: true,
-  },
-  transpilePackages: ["@repo/ui", "shared"],
+  transpilePackages: ["@repo/ui", "flaky-test-detector-shared"],
+  output: 'standalone',
   typescript: {
     // Temporarily ignore build errors during initial setup
     ignoreBuildErrors: true,
