@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: ["@repo/ui", "flaky-test-detector-shared"],
-  output: 'standalone',
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
   typescript: {
     // Temporarily ignore build errors during initial setup
     ignoreBuildErrors: true,
