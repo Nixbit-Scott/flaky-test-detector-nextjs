@@ -21,12 +21,10 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Build shared package
-      run: npm run build:shared
+    - name: Build all packages with Turbo
+      run: npm run build
 
-    - name: Build frontend
-      run: npm run build:frontend
-
+    
     - name: Install Vercel CLI
       run: npm install -g vercel
 
