@@ -1,5 +1,7 @@
 'use client';
 
+import React from 'react';
+
 export default function HomePage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -34,6 +36,14 @@ export default function HomePage() {
             <button className="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
               Get Started
             </button>
+          </div>
+          <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <p className="text-green-800 font-medium">
+              ✅ Next.js Application Successfully Built and Deployed!
+            </p>
+            <p className="text-green-600 text-sm mt-1">
+              Full dashboard functionality will be restored once authentication is working
+            </p>
           </div>
         </div>
       </div>
