@@ -1,0 +1,10 @@
+{
+  "name": "flaky-detector-simple",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html dist/ && cp style.css dist/",
+    "start": "python3 -m http.server 3000"
+  },
+  "devDependencies": {}
+}

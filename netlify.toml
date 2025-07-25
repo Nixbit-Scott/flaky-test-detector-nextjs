@@ -1,13 +1,8 @@
 [build]
-  base = "."
-  command = "npm run build:web"
-  publish = "apps/web/out"
+  base = "simple-build"
+  command = "npm run build"
+  publish = "simple-build/dist"
 
 [build.environment]
   NODE_VERSION = "18"
   NPM_VERSION = "9"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
