@@ -1,8 +1,9 @@
 [build]
   base = "simple-build"
   command = "npm run build"
-  publish = "simple-build/dist"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "18"
   NPM_VERSION = "9"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
